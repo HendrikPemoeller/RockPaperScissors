@@ -10,5 +10,12 @@ repositories {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib'
+    testImplementation(platform("org.junit:junit-bom:5.7.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testCompile 'com.willowtreeapps.assertk:assertk-jvm:0.21'
+}
+
+test {
+    useJUnitPlatform()
 }
