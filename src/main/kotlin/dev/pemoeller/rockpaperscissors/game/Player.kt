@@ -1,6 +1,6 @@
 package dev.pemoeller.rockpaperscissors.game
 
-import dev.pemoeller.rockpaperscissors.game.GameToken.*
+import dev.pemoeller.rockpaperscissors.game.GameToken.ROCK
 
 fun onlyRockPlayerTurn() = ROCK
 
