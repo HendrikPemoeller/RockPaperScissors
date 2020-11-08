@@ -6,7 +6,7 @@ import assertk.assertions.hasSize
 import assertk.assertions.isEqualTo
 import org.junit.jupiter.api.Test
 
-internal class GameRunnerKtTest{
+internal class GameRunnerKtTest {
 
     @Test
     fun `returns a list with 100 entries`() {
@@ -24,12 +24,12 @@ internal class GameRunnerKtTest{
     }
 
     @Test
-    fun `returns computed game statistics from results`(){
+    fun `returns computed game statistics from results`() {
         val gameResults = listOf(Result.WIN, Result.LOST, Result.WIN, Result.DRAW)
 
         val result = computePlayerStatistic(gameResults)
 
-        with(result){
+        with(result) {
             assertThat(wins).isEqualTo(2)
             assertThat(looses).isEqualTo(1)
             assertThat(draws).isEqualTo(1)
@@ -37,10 +37,10 @@ internal class GameRunnerKtTest{
     }
 
     @Test
-    fun `returns computed game statistics if results is an empty list`(){
+    fun `returns computed game statistics if results is an empty list`() {
         val result = computePlayerStatistic(emptyList())
 
-        with(result){
+        with(result) {
             assertThat(wins).isEqualTo(0)
             assertThat(looses).isEqualTo(0)
             assertThat(draws).isEqualTo(0)

@@ -11,11 +11,11 @@ fun runBatch(
 fun computePlayerStatistic(
     results: List<Result>
 ): PlayerStatistic {
- return PlayerStatistic(
-     wins = results.filter{it == Result.WIN}.size,
-     looses = results.filter{it == Result.LOST}.size,
-     draws = results.filter{it == Result.DRAW}.size
- )
+    return PlayerStatistic(
+        wins = results.filter { it == Result.WIN }.size,
+        looses = results.filter { it == Result.LOST }.size,
+        draws = results.filter { it == Result.DRAW }.size
+    )
 }
 
 data class PlayerStatistic(val wins: Int, val looses: Int, val draws: Int)
